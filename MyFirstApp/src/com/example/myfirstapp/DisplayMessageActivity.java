@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.Menu;
 import android.widget.TextView;
 
@@ -15,6 +16,7 @@ public class DisplayMessageActivity extends Activity {
 		
 		Intent intent = getIntent();
 		String msg = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+		Log.i("msg", msg);
 		
 		TextView view = new TextView(this);
 		view.setTextColor(Color.RED);
