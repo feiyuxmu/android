@@ -13,16 +13,46 @@ public class DisplayMessageActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Log.i("feiyuxmu", "onCreate");
 		
 		Intent intent = getIntent();
 		String msg = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-		Log.i("msg", msg);
 		
 		TextView view = new TextView(this);
 		view.setTextColor(Color.RED);
 		view.setTextSize(40);
 		view.setText(msg);
 		setContentView(view);
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		Log.i("feiyuxmu", "onDestroy");
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		Log.i("feiyuxmu", "onPause");
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		Log.i("feiyuxmu", "onResume");
+	}
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+		Log.i("feiyuxmu", "onStart");
+	}
+
+	@Override
+	protected void onStop() {
+		super.onStop();
+		Log.i("feiyuxmu", "onStop");
 	}
 
 	@Override
